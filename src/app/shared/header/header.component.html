@@ -3,12 +3,17 @@
       <div class="logo">
         <a routerLink="/home">Aethervista Software</a>
       </div>
-      <ul class="nav-links">
-        <li><a routerLink="/home">Home</a></li>
-        <li><a routerLink="/services">Services</a></li>
-        <li><a routerLink="/products">Products</a></li>
-        <li><a routerLink="/about-us">About Us</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
+      <div class="burger" (click)="toggleNav()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links" [class.nav-active]="navOpen">
+        <li><a routerLink="/home" (click)="closeNav()">Home</a></li>
+        <li><a routerLink="/services" (click)="closeNav()">Services</a></li>
+        <li><a routerLink="/products" (click)="closeNav()">Products</a></li>
+        <li><a routerLink="/about-us" (click)="closeNav()">About Us</a></li>
+        <li><a routerLink="/contact" (click)="closeNav()">Contact</a></li>
       </ul>
     </nav>
   </header>
