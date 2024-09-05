@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <div class="logo">
         <a routerLink="/home">Aethervista Software</a>
       </div>
@@ -15,6 +15,27 @@
         <li><a routerLink="/about-us" (click)="closeNav()">About Us</a></li>
         <li><a routerLink="/contact" (click)="closeNav()">Contact</a></li>
       </ul>
+    </nav> -->
+
+    <nav>
+        <div class="logo">
+            
+            <img routerLink="/home" src="./../../../assets/imgs/aethervista-logo.png" alt="Logo Image">
+        </div>
+        <div class="hamburger" (click)="toggleNav()" [ngClass] = "{'toggle' : navOpen}">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links" [ngClass] = "{'open' : navOpen}">
+            <li [ngClass] = "{'fade' : navOpen}"><a routerLink="/home" (click)="closeNav()">Home</a></li>
+            <li [ngClass] = "{'fade' : navOpen}"><a routerLink="/services" (click)="closeNav()">Services</a></li>
+            <li [ngClass] = "{'fade' : navOpen}"><a routerLink="/products" (click)="closeNav()">Products</a></li>
+            <li [ngClass] = "{'fade' : navOpen}"><a routerLink="/about-us" (click)="closeNav()">About Us</a></li>
+            <li [ngClass] = "{'fade' : navOpen}"><a routerLink="/contact" (click)="closeNav()">Contact Us</a></li>
+            <!-- <li><button class="login-button" href="#">Login</button></li>
+            <li><button class="join-button" href="#">Join</button></li> -->
+        </ul>
     </nav>
   </header>
   
