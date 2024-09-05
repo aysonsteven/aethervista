@@ -11,6 +11,10 @@ $background-color_4: #333;
 /* Small devices (mobile) */
 /* Medium devices (tablet) */
 /* Large devices (desktop) */
+html{
+	position:relative; 
+	min-height: 100%;
+}
 * {
 	margin: 0;
 	padding: 0;
